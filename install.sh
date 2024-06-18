@@ -4,25 +4,25 @@
 set -u
 
 # Install oh-my-zsh
-if [ -d ~/.oh-my-zsh ]; then :; else
-    echo "install oh-my-zsh"
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-fi
+# if [ -d ~/.oh-my-zsh ]; then :; else
+#     echo "install oh-my-zsh"
+#     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+# fi
 
-mkdir -p $HOME/.oh-my-zsh/themes
-cp -n .oh-my-zsh/themes/mytheme.zsh-theme $HOME/.oh-my-zsh/themes/mytheme.zsh-theme
+# mkdir -p $HOME/.oh-my-zsh/themes
+# cp -n .oh-my-zsh/themes/mytheme.zsh-theme $HOME/.oh-my-zsh/themes/mytheme.zsh-theme
 
-if [ "$REMOTE_CONTAINERS" = true ]; then # only in .devcontianer
-    chsh -s /bin/zsh
-else
-    cp -n .gitconfig $HOME/.gitconfig
-fi
+# if [ "$REMOTE_CONTAINERS" = true ]; then # only in .devcontianer
+#     chsh -s /bin/zsh
+# else
+#     cp -n .gitconfig $HOME/.gitconfig
+# fi
 
-if [ -e $HOME/.zshrc ]; then
-    mv $HOME/.zshrc $HOME/.zshrc_old-$(date "+%FT%T")
-fi
+# if [ -e $HOME/.zshrc ]; then
+#     mv $HOME/.zshrc $HOME/.zshrc_old-$(date "+%FT%T")
+# fi
 
-cp .zshrc $HOME/.zshrc
+# cp .zshrc $HOME/.zshrc
 
 # 今のディレクトリ
 # dotfilesディレクトリに移動する
